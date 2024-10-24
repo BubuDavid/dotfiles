@@ -98,6 +98,8 @@ bindkey '^k' forward-char
 bindkey '^h' backward-word
 bindkey '^l' forward-word
 
+bindkey '^D' delete-char-or-list
+
 bindkey '^E^E' edit-command-line
 bindkey '^@' clear-screen
 
