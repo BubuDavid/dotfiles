@@ -92,6 +92,15 @@ export PATH="$HOME/bin/.local/scripts:$PATH"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# Keybinds
+bindkey '^j' backward-char
+bindkey '^k' forward-char
+bindkey '^h' backward-word
+bindkey '^l' forward-word
+
+bindkey '^E^E' edit-command-line
+bindkey '^@' clear-screen
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
