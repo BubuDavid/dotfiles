@@ -100,15 +100,10 @@ bindkey '^l' forward-word
 
 bindkey '^D' delete-char-or-list
 
-bindkey '^E^E' edit-command-line
+bindkey '^X^E' edit-command-line
 bindkey '^@' clear-screen
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
