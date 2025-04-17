@@ -1,7 +1,0 @@
-addToPathFront() {
-    PATH="$1:$PATH"
-}
-
-addToPathFront $HOME/.local/scripts
-
-bindkey -s ^f "tmux-sessionizer^M"
