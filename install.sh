@@ -42,8 +42,10 @@ log_info "Starting dotfiles installation..."
 log_info "Dotfiles directory: $DOTFILES_DIR"
 
 # Create symlinks
-create_symlink ".zshrc" "$HOME/.zshrc"
-create_symlink ".tmux.conf" "$HOME/.tmux.conf"
+create_symlink "zshrc" "/home/bubu/.zshrc"
+create_symlink "tmux.conf" "/home/bubu/.tmux.conf"
 create_symlink "./tmux-sessionizer.sh" "/usr/local/bin/tmux-sessionizer"
+create_symlink "./tv_config.toml" "/home/bubu/.config/television/config.toml"
+create_symlink "./p10k.zsh" "/home/bubu/.p10k.zsh"
 
 log_info "Dotfiles installation complete!"
