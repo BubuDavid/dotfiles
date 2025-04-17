@@ -17,6 +17,8 @@ bindkey '^D' delete-char-or-list
 bindkey '^X^E' edit-command-line
 bindkey '^@' clear-screen
 
+bindkey -s ^f "tmux-sessionizer^M"
+
 export EDITOR='nvim'
 
 eval "$(tv init zsh)"

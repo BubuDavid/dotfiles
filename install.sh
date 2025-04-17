@@ -24,7 +24,7 @@ log_error() {
 # Create a symbolic link
 create_symlink() {
     local source_file="$DOTFILES_DIR/$1"
-    local target_file="$HOME/$2"
+    local target_file="$2"
 
     # Check if source file exists
     if [ ! -e "$source_file" ]; then
@@ -41,8 +41,9 @@ create_symlink() {
 log_info "Starting dotfiles installation..."
 log_info "Dotfiles directory: $DOTFILES_DIR"
 
-# Create symlinks (add more as needed)
-create_symlink ".zshrc" ".zshrc"
-create_symlink ".tmux.conf" ".tmux.conf"
+# Create symlinks
+create_symlink ".zshrc" "$HOME/.zshrc"
+create_symlink ".tmux.conf" "$HOME/.tmux.conf"
+create_symlink "./tmux-sessionizer.sh" "/usr/local/bin/tmux-sessionizer"
 
 log_info "Dotfiles installation complete!"
