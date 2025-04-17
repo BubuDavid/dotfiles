@@ -18,4 +18,5 @@ bindkey '^X^E' edit-command-line
 bindkey '^@' clear-screen
 
 export EDITOR='nvim'
+
 eval "$(tv init zsh)"
