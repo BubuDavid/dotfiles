@@ -47,6 +47,7 @@ create_symlink "tmux.conf" "/home/bubu/.tmux.conf"
 create_symlink "./tmux-sessionizer.sh" "/usr/local/bin/tmux-sessionizer"
 create_symlink "./tmux-attacher.sh" "/usr/local/bin/tmux-attacher"
 create_symlink "./tv_config.toml" "/home/bubu/.config/television/config.toml"
+create_symlink "./tv_custom_channels.toml" "/home/bubu/.config/television/custom_channels.toml"
 create_symlink "./p10k.zsh" "/home/bubu/.p10k.zsh"
 
 log_info "Dotfiles installation complete!"

@@ -1,0 +1,9 @@
+[[cable_channel]]
+name = "tmux ls"
+source_command = "tmux ls -F \"#S\""
+preview_command = "tmux capture-pane -t {0} -p -e"
+
+[[cable_channel]]
+name = "custom dirs"
+source_command = "find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 1 -type d"
+preview_command = "ls -la --color=always {0}"

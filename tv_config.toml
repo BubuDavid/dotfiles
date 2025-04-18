@@ -100,7 +100,6 @@ toggle_help = "ctrl-g"
 # Toggle the preview panel
 toggle_preview = "ctrl-o"
 
-
 # Shell integration
 # ----------------------------------------------------------------------------
 #
@@ -138,7 +137,7 @@ fallback_channel = "files"
   "head",
   "tail",
   "vim",
-	"nvim",
+  "nvim",
   "nano",
   "bat",
   "cp",
@@ -166,7 +165,7 @@ fallback_channel = "files"
 ]
 "docker-images" = ["docker run"]
 "git-repos" = ["code", "hx", "git clone"]
-
+"tmux ls" = ["tmux attach -t"]
 
 [shell_integration.keybindings]
 # controls which key binding should trigger tv

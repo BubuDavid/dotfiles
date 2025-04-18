@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 1 -type d | tv)
+    selected=$(tv 'custom dirs')
 fi
 
 if [[ -z $selected ]]; then
@@ -15,7 +15,7 @@ tmux_running=$(pgrep tmux)
 
 # If no tmux session is running, start a new session
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    # Start a new session and run the activation command inside it
+    # Start a new session
     tmux new-session -s $selected_name -c $selected
     exit 0
 fi
