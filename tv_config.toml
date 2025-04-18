@@ -138,6 +138,7 @@ fallback_channel = "files"
   "head",
   "tail",
   "vim",
+	"nvim",
   "nano",
   "bat",
   "cp",
@@ -164,7 +165,7 @@ fallback_channel = "files"
   "git push",
 ]
 "docker-images" = ["docker run"]
-"git-repos" = ["nvim", "code", "hx", "git clone"]
+"git-repos" = ["code", "hx", "git clone"]
 
 
 [shell_integration.keybindings]

@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=~/$(tv dirs ~)
+    selected=$(find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 1 -type d | tv)
 fi
 
 if [[ -z $selected ]] || [[ $selected == ~/ ]]; then
