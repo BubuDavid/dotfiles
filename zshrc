@@ -34,3 +34,5 @@ eval "$(tv init zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . "$HOME/.local/bin/env"
+
+export PATH="/opt/node-current/bin:$PATH" # Custom symlink to my custom node installation
