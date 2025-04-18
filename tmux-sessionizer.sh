@@ -6,7 +6,7 @@ else
     selected=$(find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 1 -type d | tv)
 fi
 
-if [[ -z $selected ]] || [[ $selected == ~/ ]]; then
+if [[ -z $selected ]]; then
     exit 0
 fi
 
