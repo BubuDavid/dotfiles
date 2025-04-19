@@ -24,7 +24,8 @@ bindkey '^D' delete-char-or-list
 bindkey '^X^E' edit-command-line
 bindkey '^@' clear-screen
 
-bindkey -s ^f "tmux-sessionizer^M"
+bindkey -s ^f^f "tmux-sessionizer^M"
+bindkey -s ^f^t "tmux-sessionizer --channel \"tmux ls\"^M"
 
 export EDITOR='nvim'
 

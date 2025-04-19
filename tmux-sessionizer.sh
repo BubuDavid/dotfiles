@@ -1,9 +1,34 @@
 #!/usr/bin/env zsh
 
-if [[ $# -eq 1 ]]; then
-    selected=$1
-else
-    selected=$(tv 'custom dirs')
+# Default value for channel
+channel="custom dirs"
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --channel=*)
+            channel="${1#*=}"
+            shift
+            ;;
+        --channel)
+            if [[ -n "$2" && "$2" != --* ]]; then
+                channel="$2"
+                shift 2
+            else
+                echo "Error: Missing value for --channel" >&2
+                exit 1
+            fi
+            ;;
+        *)
+            selected="$1"
+            shift
+            ;;
+    esac
+done
+
+# If no directory was selected as a positional argument, use tv with the specified channel
+if [[ -z $selected ]]; then
+    selected=$(tv "$channel")
 fi
 
 if [[ -z $selected ]]; then
