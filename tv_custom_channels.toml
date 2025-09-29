@@ -5,5 +5,5 @@ preview_command = "tmux capture-pane -t {0} -p -e"
 
 [[cable_channel]]
 name = "custom dirs"
-source_command = "find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 2 -type d"
+source_command = "find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 2 -type d -not -path '*/.*'"
 preview_command = "ls -la --color=always {0}"
