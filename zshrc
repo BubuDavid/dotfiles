@@ -29,11 +29,13 @@ bindkey -s ^f^t "tmux-sessionizer --channel \"tmux ls\"^M"
 
 export EDITOR='nvim'
 
-eval "$(tv init zsh)"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . "$HOME/.local/bin/env"
 
 export PATH="/opt/node-current/bin:$PATH" # Custom symlink to my custom node installation
+
+# Eza aliases:
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lt='eza --tree --level=2 --long --icons --git'

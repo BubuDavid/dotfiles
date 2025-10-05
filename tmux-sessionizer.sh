@@ -1,35 +1,7 @@
 #!/usr/bin/env zsh
 
-# Default value for channel
-channel="custom dirs"
-
-# Parse arguments
-while [[ $# -gt 0 ]]; do
-    case "$1" in
-        --channel=*)
-            channel="${1#*=}"
-            shift
-            ;;
-        --channel)
-            if [[ -n "$2" && "$2" != --* ]]; then
-                channel="$2"
-                shift 2
-            else
-                echo "Error: Missing value for --channel" >&2
-                exit 1
-            fi
-            ;;
-        *)
-            selected="$1"
-            shift
-            ;;
-    esac
-done
-
-# If no directory was selected as a positional argument, use tv with the specified channel
-if [[ -z $selected ]]; then
-    selected=$(tv "$channel")
-fi
+# Capture the selected directory
+selected=$(find ~/work ~/dev ~/ ~/learning ~/vid ~/.config /mnt/c/Users/david/.glzr -mindepth 1 -maxdepth 2 -type d -not -path '*/.*' -print | sort -u | fzf)
 
 if [[ -z $selected ]]; then
     exit 0
