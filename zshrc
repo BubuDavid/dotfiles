@@ -39,3 +39,7 @@ export PATH="/opt/node-current/bin:$PATH" # Custom symlink to my custom node ins
 # Eza aliases:
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lt='eza --tree --level=2 --long --icons --git'
+ff() {
+    export selected=$(find ./ -not -path '*/.*' 2>/dev/null | fzf)
+    echo "selected = ${selected}"
+}
