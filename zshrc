@@ -43,3 +43,6 @@ ff() {
     export selected=$(find ./ -not -path '*/.*' 2>/dev/null | fzf)
     echo "selected = ${selected}"
 }
+
+# Random Current alias
+alias adb='~/work/amaia_hub/.venv/bin/python ~/work/amaia_hub/src/amaia_hub/services/db_cli/app.py'
